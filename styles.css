@@ -1,0 +1,105 @@
+html {
+  height: 100vh;
+  margin: 0;
+}
+
+body {
+  background-color: #171717; /* Tailwind's neutral-900 */
+  min-height: 100vh;
+  color: #e5e7eb; /* Tailwind's gray-200 */
+  padding: 1.5rem; /* Tailwind's p-6 = 24px = 1.5rem */
+  font-family: "Georgia", serif;
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.6rem; /* 30px — Tailwind's text-3xl */
+  font-weight: 700; /* Bold */
+  margin-bottom: 0rem; /* 16px — Tailwind's mb-4 */
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.75;
+  letter-spacing: 0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: aliceblue;
+}
+
+.cv {
+  display: flex;
+  height: 100vh;
+
+  line-height: 1.7;
+  letter-spacing: 0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*INFO*/
+.info {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 20vw;
+  padding-top: 27vh;
+}
+
+.info p {
+  margin: 0;
+  padding: 1;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-family: inherit;
+}
+
+.info-card {
+  margin-bottom: 1.2vh;
+}
+
+/*PICTURE*/
+.picture {
+  display: flex;
+  width: 20vw;
+}
+
+.picture img {
+  border-radius: 50%;
+}
+
+/*MAIN*/
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 60vw;
+}
+
+.header {
+  padding-top: 6vh;
+}
+
+.content {
+  padding-top: 10vh;
+}
+
+.content p {
+  margin: 0;
+  padding: 1;
+  font-size: 1.2rem;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-family: inherit;
+}
+
+.experience {
+  margin-top: 4vh;
+}
+
+@media (max-width: 980px) {
+}

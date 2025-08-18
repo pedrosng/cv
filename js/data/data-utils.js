@@ -1,59 +1,10 @@
-let infoDiv;
-let infoSection;
-
-let contentDiv;
-
-export const loadContentSections = (alias, contentData) => {
-  contentDiv = document.querySelector(".content");
-
-  const contentSection = document.createElement("div");
-  contentSection.classList.add(alias);
-
-  buildTitle(contentData.title, contentSection);
-
-  if (contentData.title == "Profile") {
-    buildContact(contentData, contentSection);
-  }
-
-  if (contentData.title == "Experience") {
-    buildCards(contentData, contentSection);
-  }
-
-  contentDiv.appendChild(contentSection);
-};
-
-export const loadInfoSections = (alias, infoData) => {
-  infoSection = document.querySelector(alias);
-  infoDiv = document.querySelector(".info");
-
-  buildTitle(infoData.title, infoSection);
-
-  if (infoData.title == "Contact") {
-    buildContact(infoData, infoSection);
-  }
-
-  if (infoData.title == "Hyperlinks") {
-    buildHyperlinks(infoData, infoSection);
-  }
-
-  if (infoData.title == "Education") {
-    buildCards(infoData, infoSection);
-  }
-
-  if (infoData.title == "Tech Skills") {
-    buildCards(infoData, infoSection);
-  }
-
-  infoDiv.appendChild(infoSection);
-};
-
-const buildTitle = (title, div) => {
+export const buildTitle = (title, infoSection) => {
   const h1 = document.createElement("h1");
   h1.textContent = title;
-  div.appendChild(h1);
+  infoSection.appendChild(h1);
 };
 
-const buildContact = (infoData, infoSection) => {
+export const buildContact = (infoData, infoSection) => {
   const contactData = filterTitleOnInfoData(infoData);
   const infoCard = createInfoCard();
 
@@ -71,7 +22,7 @@ const buildContact = (infoData, infoSection) => {
   infoSection.appendChild(infoCard);
 };
 
-const buildHyperlinks = (infoData, infoSection) => {
+export const buildHyperlinks = (infoData, infoSection) => {
   const hyperlinks = filterTitleOnInfoData(infoData);
   const infoCard = createInfoCard();
 
@@ -91,7 +42,7 @@ const buildHyperlinks = (infoData, infoSection) => {
   infoSection.appendChild(infoCard);
 };
 
-const buildCards = (infoData, infoSection) => {
+export const buildCards = (infoData, infoSection) => {
   const educationData = filterTitleOnInfoData(infoData);
 
   const educationEntrie = Object.keys(educationData).map(
@@ -108,6 +59,12 @@ const buildCards = (infoData, infoSection) => {
     });
     infoSection.appendChild(infoCard);
   });
+};
+
+export const buildProfile = (contentData, infoSection) => {
+  const p = document.createElement("p");
+  p.textContent = contentData.content;
+  infoSection.appendChild(p);
 };
 
 const filterTitleOnInfoData = (infoData) => {

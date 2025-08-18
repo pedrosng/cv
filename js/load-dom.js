@@ -15,6 +15,8 @@ export const loadLargeScreenDom = () => {
 
     cv.appendChild(cvSection);
   });
+
+  createContentDivChildElements();
 };
 
 export const loadSmallScreenDom = () => {
@@ -27,4 +29,17 @@ const createChildElements = (parentElement, cvSection) => {
     childElement.classList.add(childElementClassName);
     cvSection.appendChild(childElement);
   });
+};
+
+const createContentDivChildElements = () => {
+  const contentDiv = document.querySelector(".content");
+
+  const profileDiv = document.createElement("div");
+  profileDiv.classList.add("profile");
+
+  const experienceDiv = document.createElement("div");
+  experienceDiv.classList.add("experience");
+
+  contentDiv.appendChild(profileDiv);
+  contentDiv.appendChild(experienceDiv);
 };

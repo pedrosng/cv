@@ -1,14 +1,11 @@
 import * as data from "./data/data.js";
-import {
-  loadInfoSections,
-  loadContentSections,
-} from "./utils/info-data-utils.js";
+import { loadInfoSections } from "./data-service.js";
 
 export const loadDataForLargeDom = () => {
   loadInfoData(data.info);
   loadPicture(data.picture);
   loadHeader(data.header);
-  loadContentData(data.content);
+  loadInfoData(data.content);
 };
 
 export const loadDataForSmallDom = () => {
@@ -18,12 +15,6 @@ export const loadDataForSmallDom = () => {
 const loadInfoData = (infoData) => {
   Object.keys(infoData).forEach((key) =>
     loadInfoSections("." + key + "", infoData[key])
-  );
-};
-
-const loadContentData = (infoData) => {
-  Object.keys(infoData).forEach((key) =>
-    loadContentSections(key + "", infoData[key])
   );
 };
 

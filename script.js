@@ -1,5 +1,8 @@
-import { loadLargeScreenDom, loadSmallScreenDom } from "./load-dom.js";
-import { loadDataForLargeDom, loadDataForSmallDom } from "./data-controller.js";
+import { loadLargeScreenDom, loadSmallScreenDom } from "./js/load-dom.js";
+import {
+  loadDataForLargeDom,
+  loadDataForSmallDom,
+} from "./js/data-controller.js";
 
 let loadDom;
 let loadData;

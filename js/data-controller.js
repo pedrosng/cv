@@ -1,15 +1,22 @@
 import * as data from "./data/data.js";
 import { loadInfoSections } from "./data-service.js";
 
-export const loadDataForLargeDom = () => {
+export const loadData = (windowSize) => {
+  if (windowSize <= 980) {
+    loadDataForSmallDom();
+  } else {
+    loadDataForLargeDom();
+  }
+};
+
+const loadDataForLargeDom = () => {
   loadInfoData(data.info);
   loadPicture(data.picture);
   loadHeader(data.header);
   loadInfoData(data.content);
 };
 
-export const loadDataForSmallDom = () => {
-  console.log("load data for small dom");
+const loadDataForSmallDom = () => {
   loadPicture(data.picture);
   loadHeader(data.header);
   loadInfoData(data.content);

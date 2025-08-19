@@ -1,11 +1,5 @@
-import { loadLargeScreenDom, loadSmallScreenDom } from "./js/load-dom.js";
-import {
-  loadDataForLargeDom,
-  loadDataForSmallDom,
-} from "./js/data-controller.js";
-
-let loadDom;
-let loadData;
+import { loadDom } from "./js/load-dom.js";
+import { loadData } from "./js/data-controller.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   buildView();
@@ -16,20 +10,9 @@ window.addEventListener("resize", () => {
   buildView();
 });
 
-const checkWindowSize = () => {
-  if (window.innerWidth <= 980) {
-    loadDom = loadSmallScreenDom;
-    loadData = loadDataForSmallDom;
-  } else {
-    loadDom = loadLargeScreenDom;
-    loadData = loadDataForLargeDom;
-  }
-};
-
 const buildView = () => {
-  checkWindowSize();
-  loadDom();
-  loadData();
+  loadDom(window.innerWidth);
+  loadData(window.innerWidth);
 };
 
 const clearDom = () => {

@@ -1,42 +1,12 @@
-const domElements = {
-  info: ["contact", "hyperlinks", "education", "competences"],
-  picture: ["picture-wrapper"],
-  main: ["header", "content"],
-};
-
-const mobileDomElements = {
-  picture: domElements.picture,
-  main: domElements.main,
-  info: domElements.info,
-};
-
-export const loadLargeScreenDom = () => {
+export const loadDom = (windowSize) => {
   const cv = document.querySelector(".cv");
+  const domElements = getDomElements(windowSize);
 
   Object.keys(domElements).forEach((parentDomElementClassName) => {
     let cvSection = document.createElement("div");
     cvSection.classList.add(parentDomElementClassName);
 
     createChildElements(parentDomElementClassName, cvSection, domElements);
-
-    cv.appendChild(cvSection);
-  });
-
-  createContentDivChildElements();
-};
-
-export const loadSmallScreenDom = () => {
-  const cv = document.querySelector(".cv");
-
-  Object.keys(mobileDomElements).forEach((parentDomElementClassName) => {
-    let cvSection = document.createElement("div");
-    cvSection.classList.add(parentDomElementClassName);
-
-    createChildElements(
-      parentDomElementClassName,
-      cvSection,
-      mobileDomElements
-    );
 
     cv.appendChild(cvSection);
   });
@@ -63,4 +33,22 @@ const createContentDivChildElements = () => {
 
   contentDiv.appendChild(profileDiv);
   contentDiv.appendChild(experienceDiv);
+};
+
+const getDomElements = (windowSize) => {
+  const domElements = {
+    info: ["contact", "hyperlinks", "education", "competences"],
+    picture: ["picture-wrapper"],
+    main: ["header", "content"],
+  };
+
+  if (windowSize <= 980) {
+    return {
+      picture: domElements.picture,
+      main: domElements.main,
+      info: domElements.info,
+    };
+  }
+
+  return domElements;
 };

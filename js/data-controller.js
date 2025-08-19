@@ -10,6 +10,10 @@ export const loadDataForLargeDom = () => {
 
 export const loadDataForSmallDom = () => {
   console.log("load data for small dom");
+  loadPicture(data.picture);
+  loadHeader(data.header);
+  loadInfoData(data.content);
+  loadInfoData(data.info);
 };
 
 const loadInfoData = (infoData) => {

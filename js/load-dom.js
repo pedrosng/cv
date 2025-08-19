@@ -1,7 +1,13 @@
-export const domElements = {
+const domElements = {
   info: ["contact", "hyperlinks", "education", "competences"],
   picture: ["picture-wrapper"],
   main: ["header", "content"],
+};
+
+const mobileDomElements = {
+  picture: domElements.picture,
+  main: domElements.main,
+  info: domElements.info,
 };
 
 export const loadLargeScreenDom = () => {
@@ -11,7 +17,7 @@ export const loadLargeScreenDom = () => {
     let cvSection = document.createElement("div");
     cvSection.classList.add(parentDomElementClassName);
 
-    createChildElements(parentDomElementClassName, cvSection);
+    createChildElements(parentDomElementClassName, cvSection, domElements);
 
     cv.appendChild(cvSection);
   });
@@ -20,10 +26,25 @@ export const loadLargeScreenDom = () => {
 };
 
 export const loadSmallScreenDom = () => {
-  console.log("load small screen dom");
+  const cv = document.querySelector(".cv");
+
+  Object.keys(mobileDomElements).forEach((parentDomElementClassName) => {
+    let cvSection = document.createElement("div");
+    cvSection.classList.add(parentDomElementClassName);
+
+    createChildElements(
+      parentDomElementClassName,
+      cvSection,
+      mobileDomElements
+    );
+
+    cv.appendChild(cvSection);
+  });
+
+  createContentDivChildElements();
 };
 
-const createChildElements = (parentElement, cvSection) => {
+const createChildElements = (parentElement, cvSection, domElements) => {
   domElements[parentElement].forEach((childElementClassName) => {
     let childElement = document.createElement("div");
     childElement.classList.add(childElementClassName);

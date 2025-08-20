@@ -72,5 +72,11 @@ export const content = {
       organization: "Code for All · 2020 – Present",
       description: "Built internal learning dashboard and feedback systems.",
     },
+    engineer: {
+      title: "Railway Engineering",
+      organization: "Dragados SA and Mota-Engil · 2007 – 2019",
+      description:
+        "Over a decade, I engineered and delivered railway projects across Portugal and the UK, drafting detailed construction schematics, overseeing field implementation, and ensuring technical precision throughout all project phases. My role bridged multidisciplinary teams—from designers to contractors—to drive successful on‑time delivery of infrastructure assets, combining advanced engineering acumen with strong project oversight and execution skills.",
+    },
   },
 };

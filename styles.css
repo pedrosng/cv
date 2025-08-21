@@ -5,7 +5,7 @@ html {
 
 body {
   background-color: #171717; /* Tailwind's neutral-900 */
-  min-height: 100vh;
+  min-height: 100dvh;
   color: #e5e7eb; /* Tailwind's gray-200 */
   padding: 1.5rem; /* Tailwind's p-6 = 24px = 1.5rem */
   font-family: "Georgia", serif;
@@ -33,7 +33,7 @@ a {
 
 .cv {
   display: flex;
-  height: 100vh;
+  height: 100dvh;
 
   line-height: 1.7;
   letter-spacing: 0;
@@ -45,8 +45,8 @@ a {
 .info {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 20vw;
+  height: 100dvh;
+  width: 20dvw;
   padding-top: 27vh;
 }
 
@@ -60,13 +60,13 @@ a {
 }
 
 .info-card {
-  margin-bottom: 1.2vh;
+  margin-bottom: 1.2dvh;
 }
 
 /*PICTURE*/
 .picture {
   display: flex;
-  width: 20vw;
+  width: 20dvw;
 }
 
 .picture img {
@@ -77,16 +77,16 @@ a {
 .main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100dvh;
   width: 60vw;
 }
 
 .header {
-  padding-top: 6vh;
+  padding-top: 6dvh;
 }
 
 .content {
-  padding-top: 10vh;
+  padding-top: 10dvh;
 }
 
 .content p {
@@ -99,7 +99,7 @@ a {
 }
 
 .experience {
-  margin-top: 4vh;
+  margin-top: 4dvh;
 }
 
 @media (max-width: 500px) {
@@ -111,7 +111,7 @@ a {
   .cv {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100dvh;
     height: auto;
 
     line-height: 1.6;
@@ -121,8 +121,8 @@ a {
   }
 
   .picture {
-    padding-top: 2vh;
-    width: 100vw;
+    padding-top: 2dvh;
+    width: 100dvw;
     display: flex;
     justify-content: center; /* horizontal centering */
   }
@@ -138,8 +138,8 @@ a {
   }
 
   .header {
-    padding-top: 2vh;
-    width: 100vw;
+    padding-top: 2dvh;
+    width: 100dvw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,7 +159,7 @@ a {
   }
 
   .content {
-    padding: 2vh;
+    padding: 2dvh;
     height: 100%;
   }
 
@@ -175,7 +175,7 @@ a {
 
     height: 100%;
     width: 100%;
-    padding: 2vh;
+    padding: 2dvh;
     font-size: 0.8rem;
   }
 

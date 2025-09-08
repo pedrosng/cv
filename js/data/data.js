@@ -9,7 +9,7 @@ export const info = {
     title: "Hyperlinks",
     github: "https://github.com/pedrosng",
     linkedin: "https://www.linkedin.com/in/pedronunesgoncalves/",
-    portfolio: "https://github.com/pedrosng/pedro-website",
+    portfolio: "https://g-website.netlify.app/#home",
   },
   education: {
     title: "Education",

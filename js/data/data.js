@@ -28,7 +28,7 @@ export const info = {
     title: "Tech Skills",
     java: {
       language: "Java",
-      stack: "Spring (Boot, MVC, AI), Jakarta EE, Hibernate",
+      stack: "Spring (Boot, MVC, AI), Jakarta EE, Hibernate, Calypso, Jenkins",
     },
     javaScript: {
       language: "JavaScript",
@@ -48,32 +48,43 @@ export const picture = {
 
 export const header = {
   name: "Pedro Gonçalves",
-  position: "Software Engineer & Programming Teacher",
+  position: "Software Engineer (Java & JavaScript) | Technical Analyst at Natixis | Product-minded",
 };
 
 export const content = {
   profile: {
     title: "Profile",
     content:
-      "Software engineer and programming instructor with a 6-year track record at Code for All — a hybrid software house and programming school. During this time, I taught fullstack development both in person and remotely, led instructional teams, and helped hundreds of students break into tech. I also designed and maintained course curricula, created hands-on learning materials, and developed internal educational platforms to scale learning delivery." +
-      "My background bridges education, software development, and product thinking. I specialize in software development, building educational tools, AI-integrated applications, and scalable fullstack platforms." +
-      "Currently looking for international opportunities where I can apply my technical skills and instructional experience to impactful, user-centered products.",
+      "Software Engineer with a strong background in Java and JavaScript, currently working as a Technical Analyst at Natixis, contributing to the development, maintenance, and evolution of large-scale financial systems in a highly regulated, production-critical environment." +
+      "At Natixis, I work on core business systems, including the refactoring and redesign of critical trade import mechanisms, improving scalability, modularity, and long-term maintainability. I also contribute to feature development, incident resolution, and close collaboration with product and business teams." +
+      "Previously, I spent six years at Code for All — a hybrid software house and programming school — where I worked as a fullstack engineer and technical instructor. I helped build internal learning platforms, designed and delivered intensive bootcamps and online courses, and mentored developers and instructors, supporting hundreds of people in their transition into tech." +
+      "Earlier in my career, I spent over a decade as a railway engineer with Dragados SA and Mota-Engil, delivering complex infrastructure projects across Portugal and the UK. This experience strengthened my abilities in systematic problem solving, cross-functional collaboration, process optimization, and long-term planning — skills that I now apply to designing robust, scalable, and maintainable software systems." +
+      "Outside of work, I’m passionate about literature, science (both fiction and non-fiction), and rock climbing — interests that reflect my curiosity, long-term mindset, and appreciation for challenge and continuous improvement."
   },
   experience: {
     title: "Experience",
-    educator: {
-      title: "Fullstack Instructor & Curriculum Designer",
-      organization: "Code for All · Lisbon, PT · Jan 2019 – Present",
-      description:
-        "Delivered 2,000+ hours of coding instruction to over 250 students in fullstack bootcamps (online and in-person). Designed course curriculum, hands-on projects, and assessments. Mentored 100+ students toward job placements. Participated in dev teams creating educational platforms and AI tools.",
-    },
     developer: {
-      title: "Software Developer (Internal Projects)",
-      organization: "Code for All · 2020 – Present",
-      description: "Built internal learning dashboard and feedback systems.",
+      title: "Technical Analyst",
+      organization: "Natixis Corporate & Investment Banking · 2025 – Present",
+      description:
+        "Contribute to the development, maintenance, and evolution of large-scale financial systems in a highly regulated, production-critical environment." +
+        "Refactor and redesign one of the core trade import mechanisms, transforming a monolithic, tightly coupled process into a scalable, modular, and maintainable architecture." +
+        "Provide technical support and incident resolution for internal users, ensuring system stability and continuity of operations." +
+        "Collaborate closely with product owners, analysts, and fellow engineers to translate complex business needs into robust technical solutions." +
+        "Actively contribute to code reviews, technical discussions, and knowledge sharing within the team, helping maintain high engineering standards."
+    },
+    educator: {
+      title: "Software Engineer & Technical Instructor",
+      organization: "Code for All · 2020 – 2025",
+      description: 
+      "Worked as a fullstack software engineer and technical instructor in a hybrid software house and programming school, contributing to both client-facing products and internal learning platforms." + 
+      "Led the design and delivery of intensive fullstack bootcamps, defining technical curricula and structuring scalable learning paths." + 
+      "Designed and launched online courses and digital learning content aligned with industry standards and real-world engineering practices." + 
+      "Mentored and onboarded junior developers and instructors, establishing best practices for code quality, documentation, and collaborative workflows." + 
+      "Contributed to code reviews, architecture discussions, and technical decision-making.",
     },
     engineer: {
-      title: "Railway Engineering",
+      title: "Railway Engineer",
       organization: "Dragados SA and Mota-Engil · 2007 – 2019",
       description:
         "Over a decade, I engineered and delivered railway projects across Portugal and the UK, drafting detailed construction schematics, overseeing field implementation, and ensuring technical precision throughout all project phases. My role bridged multidisciplinary teams—from designers to contractors—to drive successful on‑time delivery of infrastructure assets, combining advanced engineering acumen with strong project oversight and execution skills.",
